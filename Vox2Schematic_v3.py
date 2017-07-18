@@ -280,8 +280,8 @@ def renderModels(level,box,chunks,matdefs,matlist,colours):
 						if i == mat_id:
 							if mat_type == 2: # This is Glass
 								(block, damage) = closestMaterial(GlassColourPallete, r,g,b)
-					level.setBlockAt(box.minx+x, box.miny+z, box.minz+y, block)
-					level.setBlockDataAt(box.minx+x, box.miny+z, box.minz+y, damage)	
+					level.setBlockAt(box.maxx-1-x, box.miny+z, box.minz+y, block)
+					level.setBlockDataAt(box.maxx-1-x, box.miny+z, box.minz+y, damage)	
 	
 def parseVOXChunk(f):
 	print "Current file position "+str(f.tell())
